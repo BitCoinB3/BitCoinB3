@@ -1,0 +1,33 @@
+# /etc/conf.d/bitcoinb3d: config file for /etc/init.d/bitcoinb3d
+
+# Config file location
+#BITCOINB3D_CONFIGFILE="/etc/bitcoinb3/bitcoinb3.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOINB3D_USER)
+#BITCOINB3D_PIDDIR="/var/run/bitcoinb3d"
+
+# What filename to give the pidfile
+#BITCOINB3D_PIDFILE="${BITCOINB3D_PIDDIR}/bitcoinb3d.pid"
+
+# Where to write bitcoinb3d data (be mindful that the blockchain is large)
+#BITCOINB3D_DATADIR="/var/lib/bitcoinb3d"
+
+# User and group to own bitcoinb3d process
+#BITCOINB3D_USER="bitcoinb3"
+#BITCOINB3D_GROUP="bitcoinb3"
+
+# Path to bitcoinb3d executable
+#BITCOINB3D_BIN="/usr/bin/bitcoinb3d"
+
+# Nice value to run bitcoinb3d under
+#BITCOINB3D_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#BITCOINB3D_OPTS=""
+
+# The timeout in seconds OpenRC will wait for bitcoinb3d to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+BITCOINB3D_SIGTERM_TIMEOUT=60
